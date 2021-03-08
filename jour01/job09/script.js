@@ -9,13 +9,14 @@ function tri (nombres, ordre){
     }
 
     if ( ordre === "asc") {
-        nombres.sort(asc);
-        console.log("asc : " + nombres);
+        result =nombres.sort(asc);
+        console.log(result);
     }
     if ( ordre === "desc") {
-        nombres.sort(desc);
-        console.log("desc : " + nombres);
+        result =nombres.sort(desc);
+        console.log(result);
     }
 }
-console.log(tri([42, 182, 12, 4, 8954, 8], "desc"));
-console.log(tri([407, 10, 1, 5, 15, 9], "asc"));
+nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+tri(nombres, "asc");
+tri(nombres, "desc");
