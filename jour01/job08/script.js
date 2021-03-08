@@ -18,6 +18,6 @@ function sommenombrespremiers(n,m){
     return (n+m);
 }
 
-console.log (sommenombrespremiers(1, 4));
-console.log (sommenombrespremiers(7, 7));
+console.log (sommenombrespremiers(12, 14));
+console.log (sommenombrespremiers(19, 7));
 
