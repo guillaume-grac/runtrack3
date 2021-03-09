@@ -40,5 +40,6 @@ document.addEventListener('keydown', function(e){
 function activateCheats(){
 
     document.body.style.backgroundColor = "#88C1D0";
-    document.getElementById("content").style.backgroundColor = "#ffcb4a";
+    document.body.style.backgroundImage = "url('img.png')";
+
 }
