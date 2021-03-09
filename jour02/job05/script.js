@@ -3,11 +3,6 @@
 // même façon qu’une barre de chargement, la couleur du footer doit évoluer
 // en fonction du pourcentage de scrolling.
 
-window.onscroll = function(){
-
-    loadBarre()
-};
-
 function loadBarre(){
 
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -19,3 +14,8 @@ function loadBarre(){
     document.getElementById("myBar").style.width = scrolled + "%";
 
 }
+
+document.body.onscroll = function(){
+
+    loadBarre()
+};
