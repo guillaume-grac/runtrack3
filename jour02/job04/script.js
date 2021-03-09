@@ -4,6 +4,6 @@
 // doit être ajoutée deux fois.
 
 function dontClickOnMe(){
-    
+
     let textarea =
 }

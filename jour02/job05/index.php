@@ -2,13 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Job04</title>
+    <title>Job05</title>
+    <link href="style.css" rel="stylesheet">
     <script type='text/javascript' src='script.js'></script>
 </head>
 <body>
-    <textarea id="keylogger" name="story" rows="5" cols="50">
-
-    </textarea>
-    <script></script>
+    <footer>
+        <p>Yes.</p>
+        <section class="progress-bar" id="myBar"></section>
+        <section class="progress-container"></section>
+    </footer>
 </body>
 </html>
