@@ -3,7 +3,25 @@
 // (même si le focus en cours n’est pas le textarea). Si c’est le cas, la lettre
 // doit être ajoutée deux fois.
 
-function dontClickOnMe(){
+    function keylogger(e){
 
-    let textarea =
-}
+        let keynum;
+
+        if (document.event){
+
+            keynum = e.keyCode;
+
+        }
+        else if (e.which){
+
+            keynum = e.which;
+        }
+
+        document.getElementById('textarea').textContent += String.fromCharCode(keynum);
+    }
+document.onkeypress = function (){
+
+    keylogger(e)
+};
+
+document.addEventListener("keypress", keylogger, true);

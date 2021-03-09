@@ -6,9 +6,7 @@
     <script type='text/javascript' src='script.js'></script>
 </head>
 <body>
-    <textarea id="keylogger" name="story" rows="5" cols="50">
-
-    </textarea>
-    <script></script>
+    <textarea id="textarea" onkeypress="return keylogger(event)"></textarea>
+    <script>keylogger();</script>
 </body>
 </html>
