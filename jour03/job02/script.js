@@ -1,3 +1,6 @@
+// Mon premier code qui fût un echec.
+//J'y était presque !
+
 /*
 let melange = document.getElementById("melangees");
 
@@ -78,11 +81,16 @@ $('#div6').click(function ()
         div6.innerHTML = temp;
 }); */
 
+
+//Code fonctionnel en drag and drop.
+
+//On commence par faire le bouton mélanger.
 $('#button').click(function (){
 
         var parent = $("#melangees");
         var divs = parent.children();
 
+        //On replace avec append dans la meme div mais on utilise le random pour mélanger.
         while (divs.length) {
                 parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
         }
@@ -96,27 +104,30 @@ function allowDrop(ev) {
 
 function drag(ev) {
 
-        ev.dataTransfer.setData("text", ev.target.id);
+        ev.dataTransfer.setData("text", ev.target.id); //DataTransfer contient les données glissées au cours d'une opération de glisser-déposer.
         console.log("DRAG START");
-} //DataTransfer contient les données glissées au cours d'une opération de glisser-déposer.
+}
 
 function drop(ev) {
 
         ev.preventDefault();
+
         var data = ev.dataTransfer.getData("text");
+
         ev.target.appendChild(document.getElementById(data));  //target se réfère à l'élément cliqué
 
         var parent = $("#rangees");
         var child = parent.children();
         var solution = ['image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6'];
+
         console.log(child[0].id);
 
         for (i = 0; child[i] && child[i].id === solution[i]; i++); //
         console.log(i);
 
         if (child.length === 6 && i === 6) {
-                console.log('gagn"');
+                alert("Tu as gagné !");
         }
         else if (child.length === 6 && i !== 6)
-                console.log("error");
+                alert("Tu as perdu !");
 }
