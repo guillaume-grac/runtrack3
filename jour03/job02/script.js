@@ -1,12 +1,4 @@
-
-/*$('#button').click(function(){
-        $('#1').attr('src', "arc" + Math.floor(Math.random() * 6) + ".png");
-        $('#2').attr('src', "arc" + Math.floor(Math.random() * 6) + ".png");
-        $('#3').attr('src', "arc" + Math.floor(Math.random() * 6) + ".png");
-        $('#4').attr('src', "arc" + Math.floor(Math.random() * 6) + ".png");
-        $('#5').attr('src', "arc" + Math.floor(Math.random() * 6) + ".png");
-        $('#6').attr('src', "arc" + Math.floor(Math.random() * 6) + ".png");*/
-
+/*
 let melange = document.getElementById("melangees");
 
 $('#button').click(function() {
@@ -15,16 +7,16 @@ $('#button').click(function() {
         }
 });
 
-/* Récupération image1 */
+//Récupération image1
 
 /*let secondDiv1 = document.getElementById('secondDiv1');
 let div1 = document.getElementById('div1');
 let temp = document.getElementById('div1').innerHTML;
 
 div1.innerHTML = secondDiv1.innerHTML;
-secondDiv1.innerHTML = temp*/
+secondDiv1.innerHTML = temp
 
-/* Déplacement image */
+//Déplacement image
 
 $('#div1').click(function ()
 {
@@ -84,4 +76,47 @@ $('#div6').click(function ()
 
         secondDiv6.innerHTML = div6.innerHTML;
         div6.innerHTML = temp;
-});
+}); */
+
+$('#button').click(function (){
+
+        var parent = $("#melangees");
+        var divs = parent.children();
+
+        while (divs.length) {
+                parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+})
+
+function allowDrop(ev) {
+
+        ev.preventDefault(); // prevent default permet de remettre a leur place les drag qui n'ont pas été droppé
+        console.log("ALLOWDROP");
+}
+
+function drag(ev) {
+
+        ev.dataTransfer.setData("text", ev.target.id);
+        console.log("DRAG START");
+} //DataTransfer contient les données glissées au cours d'une opération de glisser-déposer.
+
+function drop(ev) {
+
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));  //target se réfère à l'élément cliqué
+
+        var parent = $("#rangees");
+        var child = parent.children();
+        var solution = ['image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6'];
+        console.log(child[0].id);
+
+        for (i = 0; child[i] && child[i].id === solution[i]; i++); //
+        console.log(i);
+
+        if (child.length === 6 && i === 6) {
+                console.log('gagn"');
+        }
+        else if (child.length === 6 && i !== 6)
+                console.log("error");
+}
