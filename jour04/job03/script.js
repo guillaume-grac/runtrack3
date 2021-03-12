@@ -1,9 +1,5 @@
 $('#button').click(function (){
 
-    var idPokemon = document.getElementById('#id');
-    var nomPokemon = document.getElementById('#nom');
-    var type = document.getElementById('#type');
-
     $.ajax({
         url: 'pokemon.json',
         type: 'GET',
@@ -11,26 +7,33 @@ $('#button').click(function (){
 
         success:function (data){
 
-            /*for (var i = 0; i !== data.length; i++){
+            var idPok = document.getElementById("id").value;
+            var nomPok = document.getElementById("nom").value;
+            var typePok = document.getElementById("type").value;
 
 
-                //console.log(data[i])
-                //console.log(data[i].name)
+            if (idPok || nomPok || typePok) {
 
-                if (idPokemon === data[i]){
-
-                    console.log("coucou")
-
-                }
-                console.log(data[i].type)
-            }*/
-
-            if (document.getElementById("id").value) {
                 for (var i = 0; i < data.length; i++) {
-                    var row = $('<tr><td>' + data[i].name.french + '</td><td>' + data[i].type + '</td><td>' + data[i].base.Attack + '</td></tr>');
-                    if ($('#id').val() == data[i].id) {
-                        $('#demo').append("<tr><th>Nom du Pokemon</th><th>Type de Pokemon</th><th>Attack</th></tr>");
-                        $('#demo').append(row);
+
+                    var row = $('<p> Nom : ' + data[i].name.french + '<br> Type : ' + data[i].type + '<br>Attaque : ' + data[i].base.Attack + '</p>');
+
+                    if (idPok) {
+                        if ($('#id').val() == data[i].id) {
+                            $('#demo').append(row);
+                        }
+                    }
+
+                    if (nomPok) {
+                            if ($('#nom').val() == data[i].name.french) {
+                                $('#demo').append(row);
+                            }
+                    }
+
+                    if (typePok) {
+                            if ($('#type').val() == data[i].type) {
+                                $('#demo').append(row);
+                            }
                     }
                 }
             }
