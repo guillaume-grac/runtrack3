@@ -1,17 +1,3 @@
-/* BOUTON REVENIR */
-/*$.ajax({
-    url: "index.php",
-    type: "POST",
-    dataType: "html",
-
-    success:function (data){
-
-        $('#return').click(function (){
-
-        })
-    }
-})*/
-
 /* AFFICHAGE DU FORMULAIRE D'INSCRIPTION */
 $.ajax({
     url: "inscription.php",
@@ -20,10 +6,17 @@ $.ajax({
 
     success:function (data){
 
-        $('#inscription').click(function () {
+        $('#realreturn').hide();
+        $('#inscription').click(function (){
 
             $('#displayForm').append(data);
-            $('#link').empty();
+            $('#link').hide();
+            $('#realreturn').show().click(() =>{
+
+                $('#link').show();
+                $('#displayForm').empty();
+                $('#realreturn').hide();
+            });
         });
     }
 });
@@ -36,10 +29,17 @@ $.ajax({
 
     success:function (data){
 
-        $('#connexion').click(function () {
+        $('#realreturn').hide();
+        $('#connexion').click(function (){
 
             $('#displayForm').append(data);
-            $('#link').empty();
+            $('#link').hide();
+            $('#realreturn').show().click(() =>{
+
+                $('#link').show();
+                $('#displayForm').empty();
+                $('#realreturn').hide();
+            });
         });
     }
-})
+});
