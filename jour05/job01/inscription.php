@@ -20,9 +20,7 @@ echo ('
     Confirm Password :
     <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" Confirmer votre Password">
 </label>
-<label>
     <button type="button" id="register" name="register">Valider</button>
-</label>
 ');
 
 if (isset($_POST['register'])){
