@@ -24,3 +24,12 @@
 
 </body>
 </html>
+
+<style>
+    th{
+        border: 2px solid black;
+    }
+    td{
+        border: solid 1px black;
+    }
+</style>
