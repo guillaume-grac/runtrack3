@@ -36,35 +36,55 @@
     <section class="container">
         <form method="post">
             <section>
-                <label>Civilité</label>
-                <input type="radio" name="civilite" value="Mr" id="Mr" checked="checked"/>
-                <label for="Mr">Mr</label>
-                <input type="radio" name="civilite" value="Mme" id="Mme"/>
-                <label for="Mme">Mme</label>
+                <label><i class="small material-icons">supervisor_account </i></label>
+                <input class="with-gap" name="civilite" type="radio" checked/>
+                <span>Monsieur</span>
+                <input class="with-gap" name="civilite" type="radio"/>
+                <span>Madame</span>
             </section><br>
             <section>
-                <label>Nom:</label><br>
-                <input type="text" name="nom" id="nom"/><br><br>
-                <label>Prénom:</label><br>
-                <input type="text" name="prenom" id="prénom"/><br><br>
-                <label>Adresse:</label><br>
-                <input type="text" name="adresse" id="adresse" /><br><br>
-                <label>Mail:</label><br>
-                <input type="email" name="mail" id="mail" /><br><br>
-                <label>Mdp:</label><br>
-                <input type="password" name="password" id="password" /><br><br>
-                <label>Confirmez Mdp:</label><br>
-                <input type="password" name="Cpassword" id="Cpassword" /><br><br>
+                <div class="input-field col s6 s12 black-text">
+                    <label><i class="small material-icons">person</i></label><br>
+                    <input type="text" name="nom" id="nom" placeholder="Votre Nom"/><br><br>
+                </div>
+                <div class="input-field col s6 s12 black-text">
+                    <label><i class="small material-icons">person_outline</i></label><br>
+                    <input type="text" name="prenom" id="prénom" placeholder="Votre prénom"/><br><br>
+                </div>
+                <div class="input-field col s6 s12 black-text">
+                    <label><i class="small material-icons">place</i></label><br>
+                    <input type="text" name="adresse" id="adresse" placeholder="Votre adresse" /><br><br>
+                </div>
+                <div class="input-field col s6 s12 black-text">
+                    <label><i class="small material-icons">mail</i></label><br>
+                    <input type="email" name="mail" id="mail" placeholder="Votre mail"/><br><br>
+                </div>
+                <div class="input-field col s6 s12 black-text">
+                    <label><i class="small material-icons">lock</i></label><br>
+                    <input type="password" name="password" id="password" placeholder="Votre Mdp" /><br><br>
+                </div>
+                <div class="input-field col s6 s12 black-text">
+                    <label><i class="small material-icons">lock_outline</i></label><br>
+                    <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez Mdp" /><br><br>
+                </div>
                 <section>
                     <p>Vos passions :</p>
-                    <input type="checkbox" id="informatique" name="informatique" >
-                    <label for="informatique">Informatique</label>
-                    <input type="checkbox" id="voyages" name="voyages" >
-                    <label for="voyages">Voyages</label>
-                    <input type="checkbox" id="sport" name="sport" >
-                    <label for="sport">Sport</label>
-                    <input type="checkbox" id="lecture" name="lecture" >
-                    <label for="lecture">Lecture</label>
+                    <label>
+                        <input type="checkbox" id="informatique" name="informatique" />
+                        <span>Informatique</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox" id="sport" name="sport" />
+                        <span>Sport</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox" id="voyage" name="voyage" />
+                        <span>Voyage</span>
+                    </label><br>
+                    <label>
+                        <input type="checkbox" id="lecture" name="lecture" />
+                        <span>Lecture</span>
+                    </label>
                 </section>
             </section><br>
             <input type="submit" value="Envoyer le formulaire">
