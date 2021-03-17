@@ -11,19 +11,20 @@ if(!isset($_SESSION)){
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-<section id="link">
-    <button type="button" name="connexion" id="connexion">Connexion</button>
-    <button type="button" name="inscription" id="inscription">S'inscrire </button>
-</section>
-<section id="displayForm">
+    <section id="link">
+        <button type="button" name="connexion" id="connexion">Connexion</button>
+        <button type="button" name="inscription" id="inscription">S'inscrire </button>
+    </section>
+    <section id="displayForm">
 
-    <!-- <button type="button" name="register" id="register">Register</button> -->
-</section>
-<button id="realreturn">Revenir</button>
-<?php var_dump($_POST);
+    </section>
+    <button id="realreturn">Revenir</button>
+<?php
 
+var_dump($_POST);
 var_dump($_SESSION);
 var_dump($_SESSION['utilisateur']);
+
 if(isset($_SESSION['utilisateur'])){
     echo "<p>BONJOUR".$_SESSION['utilisateur']['prenom']." CV ???</p>";
 }

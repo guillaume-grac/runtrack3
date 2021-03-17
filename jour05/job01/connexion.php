@@ -4,19 +4,19 @@ echo ('
 <label for="email">
     Email :
     </label>
-    <input type="email" id="email" name="email" placeholder="Votre email" value="jorjooo@ok.fr">
+    <input type="email" id="email" name="email" placeholder="Votre email">
 <label for="password">
     Password :
     </label>
-    <input type="password" id="password" name="password" placeholder="Votre Password" value="jorjooo">
+    <input type="password" id="password" name="password" placeholder="Votre Password">
     <button type="submit" id="tonpere" name="tonpere">Connect</button>
 ');
 
 if (isset($_POST['connect'])){
-    try {
+    try{
         $pdo = new PDO('mysql:host=localhost; dbname=utilisateurs', 'root', '');
     }
-    catch (PDOException $e) {
+    catch (PDOException $e){
         die("Erreur :" . $e -> getMessage());
     }
 
@@ -30,7 +30,7 @@ if (isset($_POST['connect'])){
 
     $result = $getPassword -> fetch();
 
-    if ($result) {
+    if ($result){
 
         $checkPassword = $result['password'];
 
@@ -45,10 +45,11 @@ if (isset($_POST['connect'])){
 
             $infoUser = $data -> fetch(PDO::FETCH_ASSOC);
             $_SESSION['utilisateur'] = $infoUser;
-            // header('Location: index.php');
 
-        } else echo $log = "<p>Mot de passe incorrect.</p>";
-    } else echo $log = "<p>Utilisateur introuvable.</p>";
+        }
+        else echo $log = "<p>Mot de passe incorrect.</p>";
+    }
+    else echo $log = "<p>Utilisateur introuvable.</p>";
 }
 ?>
 <script type="text/javascript" src="script.js"></script>

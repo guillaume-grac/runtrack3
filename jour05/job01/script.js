@@ -1,14 +1,11 @@
-$('#tamere').click(function () {
+$('#tamere').click(function(){
+
     console.log('test1');
 
-    // console.log($("#firstName").val()),
     $.ajax({
         url: "inscription.php",
         type: "post",
-        // dataType: 'json', // what type of data do we expect back from the server
-        // async: true, // ça marche sans , j'ai juste reload le js dans inscription
-        data:
-            {
+        data:{
                 firstName: $("#firstName").val(),
                 lastName: $("#lastName").val(),
                 email: $("#email").val(),
@@ -27,6 +24,7 @@ $('#tamere').click(function () {
     });
 
 });
+
 // afficher le formulaire inscription
 $('#inscription').click(function () {
     $.ajax({
@@ -80,12 +78,10 @@ $.ajax({
 $('#tonpere').click(function () {
     console.log('test1');
 
-    // console.log($("#firstName").val()),
+
     $.ajax({
         url: "inscription.php",
         type: "post",
-        // dataType: 'json', // what type of data do we expect back from the server
-        // async: true, // ça marche sans , j'ai juste reload le js dans inscription
         data:
             {
                 email: $("#email").val(),

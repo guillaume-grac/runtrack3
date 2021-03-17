@@ -1,8 +1,11 @@
 <?php
+
 if(!isset($_SESSION)){
     session_start();
 }
+
 if (isset($_POST['register']) || isset($_POST['tamere'])){
+
     $prenom = htmlspecialchars(trim($_POST['firstName']));
     $nom = htmlspecialchars(trim($_POST['lastName']));
     $email = htmlspecialchars(trim($_POST['email']));
@@ -67,23 +70,23 @@ echo '
 <label for="firstName">
     Prénom :
     </label>
-    <input type="text" id="firstName" name="firstName" placeholder="Votre Prénom" value="guigui">
+    <input type="text" id="firstName" name="firstName" placeholder="Votre Prénom">
 <label for="lastName">
     Nom :
     </label>
-    <input type="text" id="lastName" name="lastName" placeholder="Votre Nom" value="grc">
+    <input type="text" id="lastName" name="lastName" placeholder="Votre Nom">
 <label for="email">
     Email :
     </label>
-    <input type="email" id="email" name="email" placeholder="Votre email" value="gg@13.fr">
+    <input type="email" id="email" name="email" placeholder="Votre email">
 <label for="password">
     Password :
     </label>
-    <input type="password" id="password" name="password" placeholder="Votre Password" value="azerty">
+    <input type="password" id="password" name="password" placeholder="Votre Password">
 <label for="confirmPassword">
     Confirm Password :
     </label>
-    <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" Confirmer votre Password" value="azerty">
+    <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" Confirmer votre Password">
     <button type="button" id="tamere" name="tamere">inscription</button>
     </form>
 ';
