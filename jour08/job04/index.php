@@ -45,11 +45,11 @@
             <section>
                 <div class="input-field col s6 s12 black-text">
                     <label><i class="small material-icons">person</i></label><br>
-                    <input type="text" name="nom" id="nom" placeholder="Votre Nom"/><br><br>
+                    <input type="text" name="nom" id="nom" placeholder="Votre Nom"/>
                 </div>
                 <div class="input-field col s6 s12 black-text">
                     <label><i class="small material-icons">person_outline</i></label><br>
-                    <input type="text" name="prenom" id="prénom" placeholder="Votre prénom"/><br><br>
+                    <input type="text" name="prenom" id="prénom" placeholder="Votre prénom"/>
                 </div>
                 <div class="input-field col s6 s12 black-text">
                     <label><i class="small material-icons">place</i></label><br>
